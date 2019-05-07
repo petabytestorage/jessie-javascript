@@ -1,4 +1,4 @@
-FROM circleci/node:10.11.0-jessie
+FROM circleci/node:10-jessie
 
 MAINTAINER petabytestorage@gmail.com <Petabyte Storage>
 
