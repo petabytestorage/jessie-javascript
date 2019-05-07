@@ -2,7 +2,12 @@ FROM circleci/node:10-jessie
 
 MAINTAINER petabytestorage@gmail.com <Petabyte Storage>
 
+
+USER root
+
 RUN printf "deb http://archive.debian.org/debian/ jessie main\ndeb-src http://archive.debian.org/debian/ jessie main\ndeb http://security.debian.org jessie/updates main\ndeb-src http://security.debian.org jessie/updates main" > /etc/apt/sources.list
+
+USER circleci
 
 RUN sudo apt-get update -y
 
